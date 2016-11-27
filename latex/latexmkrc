@@ -1,5 +1,5 @@
 @BIBINPUTS = ('.', '../', '../bibs');
-$latex = 'TEXINPUTS="$TEXINPUTS:./templates" platex';
+$latex = 'TEXINPUTS="$TEXINPUTS:../:../dist:./templates" platex';
 $bibtex = 'BIBINPUTS="$BIBINPUTS:../:../bibs" BSTINPUTS="$BSTINPUTS:./templates" pbibtex';
 $dvipdf = 'OSFONTDIR="$OSFONTDIR:./fonts" dvipdfmx %O -o %D %S';
 $makeindex = 'mendex -U %O -o %D %S';
