@@ -4,6 +4,7 @@ latex:
   documentInfo:
     author: 山田 太郎
     title: テストドキュメント
+    date: 2016年 12月
 ---
 
 # テスト文章
