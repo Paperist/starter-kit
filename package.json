@@ -2,10 +2,9 @@
   "name": "@paperist/starter-kit",
   "version": "0.0.0",
   "dependencies": {
-    "@paperist/remark-preset-latex": "0.0.3"
   },
   "devDependencies": {
-    "@paperist/remark-preset-latex": "^0.0.4",
+    "@paperist/remark-preset-latex": "^0.0.5",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^3.1.1",
     "remark": "^6.2.0",
