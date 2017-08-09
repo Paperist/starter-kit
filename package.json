@@ -3,7 +3,7 @@
   "license": "MIT",
   "version": "0.0.0",
   "scripts": {
-    "prebuild": "npm-run-all clean prebuild:mkdir",
+    "prebuild": "npm-run-all -p clean:latexmk prebuild:mkdir",
     "build": "npm-run-all build:remark build:latex",
     "postbuild": "npm-run-all postbuild:mv",
     "build:latex": "latexmk -cd .latex/main",
