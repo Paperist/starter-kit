@@ -1,6 +1,10 @@
 \documentclass[dvipdfmx,<%= documentoptions.join(',') %>]{<%= documentclass %>}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{cite}
+\makeatletter
+\def\NAT@parse{\typeout{This is a fake Natbib command to fool Hyperref.}}
+\makeatother
 
 %% Font Config
 \usepackage[deluxe]{otf}
