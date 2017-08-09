@@ -16,6 +16,7 @@ settings:
         - oneside
         - onecolumn
         - openany
+      fontpreset: ipaex
       title: The Test Document
       author: John Smith
       date: Jun. 2016
