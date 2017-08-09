@@ -1,26 +1,28 @@
 {
   "name": "@paperist/starter-kit",
-  "version": "0.0.0",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "@paperist/remark-preset-latex": "^0.0.5",
-    "mkdirp": "^0.5.1",
-    "npm-run-all": "^3.1.1",
-    "remark": "^6.2.0",
-    "remark-cli": "^2.1.0",
-    "rimraf": "^2.5.4",
-    "sane": "^1.4.1"
-  },
   "license": "MIT",
+  "version": "0.0.0",
   "scripts": {
-    "build": "npm-run-all build:remark build:latex",
-    "build:latex": "docker run --rm -v \"$PWD\":/workdir paperist/alpine-texlive-ja bash -c \"cd ./latex && latexmk -C main && latexmk main && latexmk -c main && mv main.pdf ../\"",
-    "build:remark": "remark src/ -r remarkrc.json -o dist/",
-    "clean": "rimraf main.pdf dist/**/*",
-    "install": "which docker && docker pull paperist/alpine-texlive-ja",
     "prebuild": "npm-run-all clean prebuild:mkdir",
-    "prebuild:mkdir": "mkdirp dist",
-    "watch": "sane \"npm run build\" --glob='{src,assets,bibs}/**/*'"
+    "build": "npm-run-all build:remark build:latex",
+    "postbuild": "npm-run-all postbuild:mv latexmk:clean",
+    "build:latex": "npm-run-all latexmk:clean latexmk:build",
+    "prebuild:mkdir": "shx mkdir -p .latex/dist",
+    "postbuild:mv": "shx mv .latex/main.pdf main.pdf",
+    "build:remark": "remark src/ -r remarkrc.yml -o .latex/dist/",
+    "clean": "npm-run-all latexmk:clean clean:rm",
+    "clean:rm": "shx rm -rf main.pdf .latex/dist",
+    "latexmk:build": "latexmk -cd .latex/main",
+    "latexmk:clean": "latexmk -C -cd .latex/main",
+    "watch": "sane \"npm run build\" --glob=\"{src,assets,bibs}/**/*\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@paperist/remark-latex": "^1.0.1",
+    "npm-run-all": "^4.0.2",
+    "remark": "^8.0.0",
+    "remark-cli": "^4.0.0",
+    "sane": "^2.0.0",
+    "shx": "^0.2.2"
   }
 }

@@ -1,0 +1,21 @@
+output: true
+plugins:
+  - "@paperist/remark-latex"
+settings:
+  latex:
+    imageConfigs:
+      width: 0.9\linewidth
+      height: 0.25\paperheight
+    documentInfo:
+      documentclass: jsbook
+      documentoptions:
+        - uplatex
+        - english
+        - a4paper
+        - 10pt
+        - oneside
+        - onecolumn
+        - openany
+      title: The Test Document
+      author: John Smith
+      date: Jun. 2016

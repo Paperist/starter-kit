@@ -1,7 +1,0 @@
-{
-  "output": true,
-  "presets": [
-    "@paperist/remark-preset-latex"
-  ],
-  "settings": {}
-}
