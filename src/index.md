@@ -14,7 +14,7 @@ $$
 (x - a)^2 + (y - b)^2 = r^2
 $$ {#eq:circle}
 
-This document was created by **Paperist** (fig.[@fig:paperist])[^paperist].
+This document was created by **Paperist**[^paperist] (fig.[@fig:paperist]).
 
 [^paperist]: https://paperist.mikumiku.moe/
 
