@@ -1,5 +1,5 @@
 ---
-baseTemplate: .latex/templates/index.tex
+baseTemplate: .paperist/templates/index.tex
 ---
 
 # The Test Document

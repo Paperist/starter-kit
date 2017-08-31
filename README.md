@@ -92,7 +92,7 @@ If you haven't LaTeX environment, we recommend to use Docker.
 paperist/latexmk environment is very tiny.
 If you want to use any plugins, you should do either below.
 
-- Put files in `.latex/templates`
+- Put files in `.paperist/templates`
   - It is simple way
 - Create new Docker image
   - Write `RUN tlmgr install any-plugin` on Dockerfile
