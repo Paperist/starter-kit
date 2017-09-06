@@ -3,11 +3,11 @@ plugins:
   - "@paperist/remark-latex"
 settings:
   latex:
+    templatesDir: .paperist/ejs
     imageConfigs:
       width: 0.9\linewidth
       height: 0.25\paperheight
     documentInfo:
-      templatesDir: .paperist/ejs
       documentclass: jsbook
       documentoptions:
         - uplatex
@@ -18,6 +18,11 @@ settings:
         - onecolumn
         - openany
       fontpreset: ipaex
-      title: The Test Document
-      author: John Smith
-      date: Jun. 2016
+      title:
+        en: The Test Document
+      date:
+        year: 2017
+        month: 6
+      authors:
+        - name:
+            en: John Smith
