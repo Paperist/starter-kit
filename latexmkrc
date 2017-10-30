@@ -4,3 +4,4 @@ $bibtex = 'BIBINPUTS="$BIBINPUTS:../:../bibs" BSTINPUTS="$BSTINPUTS:./templates"
 $dvipdf = 'OSFONTDIR="$OSFONTDIR:../fonts:./fonts" dvipdfmx %O -o %D %S';
 $makeindex = 'upmendex %O -o %D %S';
 $pdf_mode = 3;
+$bibtex_use = 2;
