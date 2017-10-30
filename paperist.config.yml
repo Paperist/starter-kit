@@ -1,0 +1,19 @@
+documentInfo:
+  documentclass: jsbook
+  documentoptions:
+    - uplatex
+    - english
+    - a4paper
+    - 10pt
+    - oneside
+    - onecolumn
+    - openany
+  fontpreset: ipaex
+  title:
+    en: The Test Document
+  date:
+    year: 2017
+    month: 6
+  authors:
+    - name:
+        en: John Smith
